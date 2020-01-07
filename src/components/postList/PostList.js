@@ -4,10 +4,10 @@ import './PostList.css';
 
 class PostList extends Component {
   state = {
-    posts = [
+    posts: [
       {
         id: 1,
-        author : {
+        author: {
           name: "João Miguel",
           avatar: "url"
         },
@@ -26,7 +26,7 @@ class PostList extends Component {
       },
       {
         id: 2,
-        author : {
+        author: {
           name: "Lucas Rogerio",
           avatar: "url"
         },
