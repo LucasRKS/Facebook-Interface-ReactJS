@@ -2,25 +2,27 @@ import React, { Component } from 'react';
 
 import './PostList.css';
 
+import Post from '../post/Post';
+
 class PostList extends Component {
   state = {
     posts: [
       {
         id: 1,
         author: {
-          name: "João Miguel",
-          avatar: "url"
+          name: "Felipe Neto",
+          avatar: "data:image/jpeg;base64,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"
         },
         date: "04 Jan 2020",
-        content: "In his or any harold sea parasites. Adieu his befell within he seemed not losel labyrinth, oh was to and.",
+        content: "Vocês já viram o luquinhas programando? O cara ta aprendendo!",
         comments: [
           {
             id: 1,
             author: {
               name: "Júlio Cocielo",
-              avatar : "url"
+              avatar : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRtIgwNky-_htQPvrBbYYjUXsIfy1mJv0ODZgHY68NnwqwaTDTQ"
             },
-            content: "Tuled kyt sumha ere thez buthuruth mezuul buol olelothya werud. Eses scouuo hyul thudothlon ezes bel hul mogomnok halal. Ne halal keguggethuk byuntelen eses tuled syrou, fyon en ullyetuk bezzeg."
+            content: "O maluco ta ficando brabo no react, fala tu!"
           }
         ]
       },
@@ -28,26 +30,26 @@ class PostList extends Component {
         id: 2,
         author: {
           name: "Lucas Rogerio",
-          avatar: "url"
+          avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRYdOyHvu6etXrdtrqqQvgxXHSgMjST6v4geSO05aqmvE368vfg"
         },
         date: "05 Jan 2020",
-        content: "In his or any harold sea parasites. Adieu his befell within he seemed not losel labyrinth, oh was to and.",
+        content: "Aprendendo react ao vivo.",
         comments: [
           {
             id: 2,
             author: {
               name: "Maria Rosa",
-              avatar : "url"
+              avatar : "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQOCfxcwox5Aclb3mhDWpo288sNFda7oE-Y2cHJnQtewOy3x7Rg"
             },
-            content: "Tuled kyt sumha ere thez buthuruth mezuul buol olelothya werud. Eses scouuo hyul thudothlon ezes bel hul mogomnok halal. Ne halal keguggethuk byuntelen eses tuled syrou, fyon en ullyetuk bezzeg."
+            content: "Ta manjando mlk."
           },
           {
             id: 3,
             author: {
-              name: "Roberto Barbosa",
-              avatar : "url"
+              name: "Diego Fernandes",
+              avatar : "data:image/jpeg;base64,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"
             },
-            content: "Tuled kyt sumha ere thez buthuruth mezuul buol olelothya werud. Eses scouuo hyul thudothlon ezes bel hul mogomnok halal. Ne halal keguggethuk byuntelen eses tuled syrou, fyon en ullyetuk bezzeg."
+            content: "Genio fioooo."
           }
         ]
       }
@@ -55,9 +57,9 @@ class PostList extends Component {
   };
 
   render() {
-    return (<div>
-      teste
-    </div>);
+    return (<main>
+        {this.state.posts.map(post => <Post key={post.id} post={post} />)}
+      </main>);
   }
 }
 

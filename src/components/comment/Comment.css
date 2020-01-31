@@ -1,0 +1,15 @@
+.comment_box {
+  background-color: #F0F0F0;
+  border-radius: 2%;
+  margin: 20px;
+  padding: 5px;
+}
+
+.comment {
+  text-align: left;
+  margin-left: 30px;
+}
+
+.comment_author {
+  text-align: left;
+}

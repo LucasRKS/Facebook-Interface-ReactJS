@@ -1,0 +1,11 @@
+main {
+  grid-area: m;
+  text-align:center;
+}
+
+main .post {
+  background-color: white;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-radius: 3%;
+}

@@ -1,0 +1,22 @@
+.post {
+  padding: 20px;
+  margin: 25px;
+}
+
+.author {
+  text-align: left;
+}
+
+.img_perfil {
+  border-radius: 60%;
+  width: 50px;
+  height: 50px;
+}
+
+.post_date {
+  color: gray;
+}
+
+.span_comentario {
+  text-align: left;
+}

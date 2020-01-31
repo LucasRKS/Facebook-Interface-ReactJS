@@ -8,9 +8,9 @@ import './Header.css';
 class Header extends Component {
   render() {
     return (<header>
-      <span id="facebook"><FontAwesomeIcon icon={faFacebook} /> facebook.</span>
-      <span id="perfil"><FontAwesomeIcon icon={faUser} /> Meu Perfil</span>
-    </header>)
+        <span id="facebook"><FontAwesomeIcon icon={faFacebook} /> facebook.</span>
+        <span id="perfil"><FontAwesomeIcon icon={faUser} /> Meu Perfil</span>
+      </header>)
   }
 }
 

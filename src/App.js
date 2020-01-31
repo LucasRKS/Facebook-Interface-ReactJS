@@ -6,7 +6,7 @@ import Header from './components/header/Header';
 import PostList from './components/postList/PostList';
 
 function App() {
-  return (<div>
+  return (<div className="container">
     <Header />
     <PostList />
   </div>)

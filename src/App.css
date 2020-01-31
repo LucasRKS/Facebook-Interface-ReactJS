@@ -1,4 +1,14 @@
-body {
+html, body {
   background-color: #F2F2F2;  
   font-family: Segoe UI;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 10vh 90vh;
+  grid-row-gap: 30px;
+  grid-template-areas: "h"
+                      "m";
 }
